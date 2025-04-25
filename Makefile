@@ -15,7 +15,7 @@ build: ##@ Build debug project
 
 build-release: ##@ Build the release project
 	@echo "Building release project..."
-	cargo build --release:
+	cargo build --release
 
 check: ##@ Run source code check
 	@echo "Run source code check..."

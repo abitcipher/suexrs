@@ -69,6 +69,10 @@ suexrs webadmin /usr/bin/configure-site
 # Clone repository and build
 git clone https://github.com/abitcipher/suexrs
 cd $PWD/suexrs
+
+# Build
+make build-release
+# or
 cargo build --release
 
 # Create the `suexrs` group if it doesn't exist
