@@ -43,13 +43,13 @@ WORKDIR /app
 COPY . /app
 RUN cargo build --release
 
-# Add user and group suex
-RUN groupadd --system suex
+# Add user and group suexrs
+RUN groupadd --system suexrs
 
-RUN adduser  --disabled-password  --system  --home /home/test  --ingroup suex  --shell /bin/bash test
-RUN usermod -a -G suex test
+RUN adduser  --disabled-password  --system  --home /home/test  --ingroup suexrs  --shell /bin/bash test
+RUN usermod -a -G suexrs test
 
 RUN cp /app/target/release/suexrs /usr/local/bin/; \
-    chown root:suex /usr/local/bin/suexrs; \
+    chown root:suexrs /usr/local/bin/suexrs; \
     chmod 4750 /usr/local/bin/suexrs;
     

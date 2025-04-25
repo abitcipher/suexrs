@@ -86,7 +86,29 @@ cp $PWD/target/release/suexrs /usr/local/bin/
 chown root:suexrs /usr/local/bin/suexrs
 chmod 4750 /usr/local/bin/suexrs
 ```
+#### Manual test
+###### on host
+```shell
+## download
+git clone https://github.com/abitcipher/suexrs
+cd $PWD/suexrs
 
+## build docker image 
+make docker-build
+make docker-run
+```
+###### inside docker
+```shell
+test@9aba56cd8adb:/app$ suexrs root passwd root
+New password: 
+Retype new password: 
+passwd: password updated successfully
+
+test@9aba56cd8adb:/app$ su root
+Password: 
+root@9aba56cd8adb:/app#
+```
+---
 #### Attribution
 
 `suexrs` is a reimplementation of [`su-exec`](https://github.com/ncopa/su-exec), enhanced for improved usability and maintainability.
