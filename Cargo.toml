@@ -1,0 +1,9 @@
+[package]
+name = "suexrs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = { version = "0.2.172", default-features = false }
+log = "0.4.27"
+env_logger = "0.11.8"
