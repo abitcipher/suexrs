@@ -1,7 +1,3 @@
-## `suexrs` - Privilege Management Tools
-
-A lightweight utility written in Rust for privilege management, with a focus on simplicity and security. It provide essential functionality for privilege management.
-
 ## suexrs - Command Execution with Different Privileges
 
 A lightweight privilege switching tool for executing commands with different user and group permissions. Think of it as a streamlined alternative to `sudo` and `su`. 
